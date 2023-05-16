@@ -11,7 +11,7 @@ staging_namespace: &stage "labs-staging"
 applications:
   # Bootstrap Project
   - name: bootstrap
-    enabled: true
+    enabled: false
     source: https://redhat-cop.github.io/helm-charts
     chart_name: bootstrap-project
     source_ref: "1.0.1"
@@ -64,7 +64,7 @@ applications:
 
   # Nexus
   - name: nexus
-    enabled: true
+    enabled: false
     source: https://redhat-cop.github.io/helm-charts
     chart_name: sonatype-nexus
     source_ref: "1.1.4"
@@ -75,7 +75,7 @@ applications:
   # Sealed Secrets Controller
   # Note you can only have one of these per cluster so be careful 
   - name: sealed-secrets-controller
-    enabled: true
+    enabled: false
     chart_name: sealed-secrets
     source: https://bitnami-labs.github.io/sealed-secrets
     source_ref: "2.1.6"
