@@ -6,14 +6,14 @@ release: ci-cd
 applications:
   # Tooling to support CI/CD
   - name: ubiquitous-journey
-    enabled: false
+    enabled: true
     source_path: "."
     helm_values:
       - ubiquitous-journey/values-tooling.yaml
 
   # Test app of app
   - name: test-app-of-pb
-    enabled: true
+    enabled: false
     source_path: "."
     helm_values:
       - pet-battle/test/values.yaml
